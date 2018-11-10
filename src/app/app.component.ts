@@ -1,7 +1,5 @@
 import { Component } from "@angular/core";
-import { Observable } from "rxjs/Observable";
 import { of } from "rxjs/Observable/of";
-import { switchMap, map, take } from "rxjs/operators";
 
 @Component({
   selector: "app-root",

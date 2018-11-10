@@ -1,3 +1,7 @@
-<app-header [config]="headerConfig" (add)="addRecipe($event)" delete="deleteRecipe()">
-    <app-recipes [recipes]="recipes$|async"></app-recipes>
+<app-header
+  [config]="headerConfig"
+  (add)="addRecipe($event)"
+  (delete)="deleteRecipe()"
+>
+  <app-recipes [recipes]="recipes$ | async"></app-recipes>
 </app-header>

@@ -6,8 +6,7 @@ import { Component, Input, EventEmitter } from "@angular/core";
   styleUrls: ["./header.component.scss"]
 })
 export class HeaderComponent {
-  @Input()
-  config: any;
+  @Input() public config: any = { title: "Testtitel" };
   @Input()
   add: EventEmitter<any> = new EventEmitter();
   @Input()
