@@ -1,7 +1,7 @@
 import { TestBed, async } from "@angular/core/testing";
 import { AppComponent } from "./app.component";
-import { HeaderComponent } from "./header/header.component";
-import { RecipesComponent } from "./recipes/recipes.component";
+import { HeaderComponent } from "./components/header/header.component";
+import { RecipesComponent } from "./components/recipes/recipes.component";
 
 describe("AppComponent", () => {
   beforeEach(async(() => {
