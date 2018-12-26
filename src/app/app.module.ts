@@ -1,16 +1,20 @@
-import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
+import { NgRedux, NgReduxModule } from "@angular-redux/store";
 
 import { AppComponent } from "./app.component";
-import { HeaderComponent } from "./components/header/header.component";
-import { RecipesComponent } from "./components/recipes/recipes.component";
-import { NO_ERRORS_SCHEMA } from "@angular/core";
+import { CommonModule } from "./common/common.module";
+import { RecipeModule } from "./recipe/recipe.module";
+
+import { rootReducer, INITIAL_STATE, IAppState } from "./store";
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, RecipesComponent],
-  imports: [BrowserModule],
+  declarations: [AppComponent],
+  imports: [NgReduxModule, CommonModule, RecipeModule],
   providers: [],
-  bootstrap: [AppComponent],
-  schemas: [NO_ERRORS_SCHEMA]
+  bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule {
+  constructor(ngRedux: NgRedux<IAppState>) {
+    ngRedux.configureStore(rootReducer, INITIAL_STATE);
+  }
+}

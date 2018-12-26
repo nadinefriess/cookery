@@ -14,12 +14,17 @@ describe("HeaderComponent", () => {
 
   beforeEach(() => {
     fixture = TestBed.createComponent(HeaderComponent);
-    component = fixture.debugElement.componentInstance;
+    component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
   it("should be created", () => {
-    component.config.title = "Testtitle";
-    expect(component.config.title).toBeDefined();
+    component.title = "Cookery";
+    expect(component).toBeDefined();
+  });
+
+  it("should have a title", () => {
+    component.title = "Cookery";
+    expect(component.title).toBeDefined();
   });
 });
