@@ -1,4 +1,4 @@
-import { Component, Input, EventEmitter } from "@angular/core";
+import { Component, Input, EventEmitter, Output } from "@angular/core";
 
 @Component({
   selector: "app-header",
@@ -7,9 +7,9 @@ import { Component, Input, EventEmitter } from "@angular/core";
 })
 export class HeaderComponent {
   @Input() public title = "Recipes";
-  @Input()
+  @Output()
   add: EventEmitter<any> = new EventEmitter();
-  @Input()
+  @Output()
   delete: EventEmitter<any> = new EventEmitter();
 
   public onAdd() {

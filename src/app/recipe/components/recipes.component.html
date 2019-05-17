@@ -1,0 +1,9 @@
+<div class="recipes">
+  <a
+    class="recipes__recipe recipe"
+    *ngFor="let recipe of (recipes$ | async)"
+    (click)="showRecipe(recipe._id)"
+  >
+    <div class="recipe__name">{{ recipe.title }}</div>
+  </a>
+</div>

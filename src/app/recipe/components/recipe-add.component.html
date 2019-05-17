@@ -1,0 +1,12 @@
+<form [formGroup]="recipeForm" (ngSubmit)="addRecipe()" class="form">
+  <label class="form__title-label"> Recipe: </label>
+  <input tclass="form__title-input" ype="text" formControlName="recipeTitle" />
+  <label class="form__description-label">Description:</label>
+  <input
+    class="form__description-input"
+    type="text"
+    formControlName="recipeDescription"
+  />
+
+  <button type="submit">Submit</button>
+</form>

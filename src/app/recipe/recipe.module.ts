@@ -1,13 +1,13 @@
 import { NgModule } from "@angular/core";
-import { RecipeComponent } from "./components/recipe.component";
+import { RecipesComponent } from "./components/recipes.component";
 import { RecipeService } from "./services/recipe.service";
-import { HttpClientModule } from "@angular/common/http";
 import { BrowserModule } from "@angular/platform-browser";
+import { RecipeComponent } from "./components/recipe.component";
+import { RecipeAddComponent } from "./components/recipe-add.component";
 
 @NgModule({
-  declarations: [RecipeComponent],
-  imports: [BrowserModule, HttpClientModule],
-  exports: [RecipeComponent],
+  declarations: [RecipesComponent, RecipeComponent, RecipeAddComponent],
+  imports: [BrowserModule],
   providers: [RecipeService]
 })
 export class RecipeModule {}

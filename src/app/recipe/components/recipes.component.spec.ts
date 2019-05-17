@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { RouterTestingModule } from "@angular/router/testing";
 
-import { RecipeComponent } from "./recipe.component";
+import { RecipesComponent } from "./recipes.component";
 import { RecipeService } from "../services/recipe.service";
 import { of } from "rxjs";
 
@@ -22,13 +23,14 @@ const TEST_RECIPES = [
   }
 ];
 
-describe("RecipeComponent", () => {
-  let component: RecipeComponent;
-  let fixture: ComponentFixture<RecipeComponent>;
+describe("RecipesComponent", () => {
+  let component: RecipesComponent;
+  let fixture: ComponentFixture<RecipesComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [RecipeComponent],
+      declarations: [RecipesComponent],
+      imports: [RouterTestingModule],
       providers: [
         {
           provide: RecipeService,
@@ -43,7 +45,7 @@ describe("RecipeComponent", () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RecipeComponent);
+    fixture = TestBed.createComponent(RecipesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

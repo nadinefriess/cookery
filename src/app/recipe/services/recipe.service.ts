@@ -4,13 +4,14 @@ import { HttpClient } from "@angular/common/http";
 @Injectable({ providedIn: "root" })
 export class RecipeService {
   public uri = "http://localhost:4000";
+
   constructor(private http: HttpClient) {}
 
   public getRecipes() {
     return this.http.get(`${this.uri}/recipes`);
   }
 
-  public getRecipeById(id: number) {
+  public getRecipeById(id: any) {
     return this.http.get(`${this.uri}/recipes/${id}`);
   }
 

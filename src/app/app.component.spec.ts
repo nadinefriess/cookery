@@ -1,13 +1,23 @@
 import { TestBed, async } from "@angular/core/testing";
 import { AppComponent } from "./app.component";
 import { CommonModule } from "./common/common.module";
-import { RecipeModule } from "./recipe/recipe.module";
+import { RouterTestingModule } from "@angular/router/testing";
+import {
+  RecipesComponent,
+  RecipeAddComponent,
+  RecipeComponent
+} from "./recipe";
 
 describe("AppComponent", () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [AppComponent],
-      imports: [RecipeModule, CommonModule]
+      declarations: [
+        AppComponent,
+        RecipesComponent,
+        RecipeAddComponent,
+        RecipeComponent
+      ],
+      imports: [CommonModule, RouterTestingModule]
     }).compileComponents();
   }));
 
